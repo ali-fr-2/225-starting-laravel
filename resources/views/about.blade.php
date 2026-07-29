@@ -9,22 +9,12 @@
 
 <body>
 
-
-{{-- @php
-    $i=1;
-@endphp
-
-@while ($i<10)
-    <p>{{ $i }}</p>
-    {{ $i++ }}
-@endwhile --}}
-
 <header>
     <p>my header</p>
 </header>
 
 <div>
-    <h1>main page</h1>
+    <h1>about page</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, id. Quod quasi, eligendi cumque odit, veniam sapiente ut necessitatibus tempore, debitis repellat reprehenderit? Iusto eligendi voluptas necessitatibus consequuntur officiis aut veniam maiores, consequatur odio. Voluptates sunt facere omnis voluptatibus illo at, deserunt necessitatibus reiciendis voluptatum tempore inventore quae. Ullam, fugiat!</p>
 </div>
 
