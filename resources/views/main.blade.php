@@ -8,22 +8,35 @@
 </head>
 
 <body>
-    {{-- @if ($records > 5)
-        {{ $records }}>5
-    @endif --}}
+
+    {{-- @switch($i)
+        @case(1)
+            first case
+        @break
+
+        @case(2)
+            second case
+        @break
+
+        @default
+            default case...
+    @endswitch --}}
+
+    {{-- @for ($i = 0; $i < 10; $i++)
+        current value is : {{ $i }} <br>
+    @endfor --}}
 
 
-    {{-- @if ($records > 5)
-        <h1>i have {{ $records }}records</h1>
-        @elseif ($records===5)
-        <h1>i dont have much records</h1>
-        @else
-        <h1>hhhhhh</h1>
-    @endif --}}
+    {{-- @foreach ($users as $user)
+        <p>this is user : {{ $user }}</p>
+    @endforeach --}}
 
-    @unless ($records>20)
-        <h1>this is unless</h1>
-    @endunless
+    @forelse ($users as $user)
+        <li>{{ $user }}</li>
+    @empty
+        <h1>there is no users</h1>
+    @endforelse
+
 
 
 </body>
