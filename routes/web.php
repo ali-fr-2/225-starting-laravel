@@ -6,5 +6,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/main', function () {
-    return view('main',['name'=>'<h1>ali</h1>']);
+    return view('main',['records'=>4]);
 });
