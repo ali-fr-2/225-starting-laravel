@@ -1,9 +1,5 @@
 {{-- @extends('layout.master') --}}
-@component('components.button',["title"=>"send","class"=>"btn"])
 
-@endcomponent
-@component('components.button',["title"=>"send","class"=>"btn"])
-@slot('title')
-ali
-@endslot
-@endcomponent
+<h1>hello world</h1>
+<x-btn data="hellllo"/>
+<x-btn data="hi"/>
