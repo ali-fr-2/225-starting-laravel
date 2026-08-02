@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\MyHome;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+
+Route::get('/',[MyHome::class,'index']);
+
+
+// Route::get('/', function () {
+//     return view('index');
+// })->name('index');
 Route::get('/about', function () {
     return view('about');
 })->name('about');

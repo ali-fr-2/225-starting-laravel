@@ -1,6 +1,6 @@
-{{-- @extends('layout.master') --}}
+@extends('layout.master')
 
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,4 +13,4 @@
 <a href="{{ route('about') }}">about</a>
 <a href="{{ route('course',['course'=>'php','id'=>'100']) }}">coure</a>
 </body>
-</html>
+</html> --}}
