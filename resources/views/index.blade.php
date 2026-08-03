@@ -1,6 +1,6 @@
-@extends('layout.master')
+{{-- @extends('layout.master') --}}
 
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,16 @@
 </head>
 <body>
 
-<h1>index</h1>
-<a href="{{ route('about') }}">about</a>
-<a href="{{ route('course',['course'=>'php','id'=>'100']) }}">coure</a>
+
+<ul>
+
+    @foreach ($courses as $course)
+        <li>{{ $course->title }}</li>
+        <li>{{ $course->id }}</li>
+    @endforeach
+
+</ul>
+
+
 </body>
-</html> --}}
+</html>

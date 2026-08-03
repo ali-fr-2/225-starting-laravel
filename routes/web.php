@@ -4,13 +4,13 @@ use App\Http\Controllers\MyHome;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
-// Route::get('/',[MyHome::class,'index']);
+Route::get('/',[MyHome::class,'index']);
 
 
-Route::get('/', function () {
-    $courses = DB::table('courses')->get();
-    dd($courses);
-});
+// Route::get('/', function () {
+//     $courses = DB::table('courses')->get();
+//     dd($courses);
+// });
 
 
 // Route::get('/', function () {
