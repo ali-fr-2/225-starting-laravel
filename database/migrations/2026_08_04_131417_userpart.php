@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create('userpart', function (Blueprint $table) {
             $table->id();
+            $table->string('name',55);
+            $table->string('user_name',155);
+            $table->string('email')->unique();
+
             $table->timestamps();
         });
+
     }
 
     /**
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sessions');
+          Schema::dropIfExists('userpart');
     }
 };
