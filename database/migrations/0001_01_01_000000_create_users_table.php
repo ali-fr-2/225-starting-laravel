@@ -1,5 +1,7 @@
 <?php
-
+// php artisan migrate:fresh
+// for when we add or delete something
+// i delete the swssion file so this command will work
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
