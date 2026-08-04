@@ -10,14 +10,14 @@
 <body>
 
 
-{{-- <ul>
+<ul>
 
-    @foreach ($courses as $course)
-        <li>{{ $course->title }}</li>
-        <li>{{ $course->id }}</li>
+    @foreach ($articles as $article)
+        <li>{{ $article->title }}</li>
+        <li>{{ $article->id }}</li>
     @endforeach
 
-</ul> --}}
+</ul>
 
 
 </body>
