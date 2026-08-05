@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Articles extends Model
 {
     // protected $table="userpart";
+    protected $fillable = ['title','price','body'];
 }
