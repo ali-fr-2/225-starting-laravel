@@ -10,7 +10,7 @@ class MyHome extends Controller
 {
     public function index()
     {
-        //insert
+                                                        //insert
 
         // $articles= new Articles();
         // $articles->title="php";
@@ -19,7 +19,7 @@ class MyHome extends Controller
         // $articles->save();
         // dd($articles);
 
-        //update
+                                                         //update
 
         // $articles=Articles::find(3)->update([
         //       'title'=>'python',
@@ -36,14 +36,14 @@ class MyHome extends Controller
         // ]);
         // dd($articles);
 
-        // $articles=Articles::updateOrCreate(['id'=>6],[
-        //     'title'=>'jsjs',
-        //     'price'=>'850000',
-        //     'body'=>'js testing'
+        // $articles=Articles::updateOrCreate(['id'=>8],[
+        //     'title'=>'c++',
+        //     'price'=>'50000',
+        //     'body'=>'testing'
         // ]);
         // dd($articles);
 
-        // delete
+                                                        // delete
 
         // $articles=Articles::where('id',1)->delete();
         // dd($articles);
@@ -58,7 +58,29 @@ class MyHome extends Controller
         // $articles=Articles::destroy(3);
         // dd($articles);
 
-        $articles = Articles::destroy([3,4,5]);
+        // $articles = Articles::destroy([3,4,5]);
+        // dd($articles);
+
+                                                        //soft-delete
+
+        // $articles=Articles::where('id',7)->delete();
+        // dd($articles);
+
+        // $articles=Articles::find(7);
+        // dd($articles);
+
+        // $articles=Articles::withTrashed()->find(7);
+        // dd($articles);
+
+        // $articles=Articles::onlyTrashed()->get();
+        // dd($articles);
+
+        // $articles=Articles::onlyTrashed()->find(7);
+        // $articles->restore();
+        // dd($articles);
+
+        $articles=Articles::where('id',7)->forceDelete();
         dd($articles);
+
     }
 }
