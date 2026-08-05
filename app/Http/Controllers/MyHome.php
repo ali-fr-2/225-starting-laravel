@@ -41,6 +41,7 @@ class MyHome extends Controller
             'price'=>'800000',
             'body'=>'react testing'
         ]);
+
         dd($articles);
     }
 }
