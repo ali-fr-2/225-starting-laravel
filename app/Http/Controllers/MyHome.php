@@ -36,12 +36,29 @@ class MyHome extends Controller
         // ]);
         // dd($articles);
 
-        $articles=Articles::updateOrCreate(['id'=>4],[
-            'title'=>'react-js',
-            'price'=>'800000',
-            'body'=>'react testing'
-        ]);
+        // $articles=Articles::updateOrCreate(['id'=>6],[
+        //     'title'=>'jsjs',
+        //     'price'=>'850000',
+        //     'body'=>'js testing'
+        // ]);
+        // dd($articles);
 
+        // delete
+
+        // $articles=Articles::where('id',1)->delete();
+        // dd($articles);
+
+        // $articles=Articles::find(2)->delete();
+        // dd($articles);
+
+        // $articles = Articles::find(2);
+        // $articles->delete();
+        // dd($articles);
+
+        // $articles=Articles::destroy(3);
+        // dd($articles);
+
+        $articles = Articles::destroy([3,4,5]);
         dd($articles);
     }
 }
