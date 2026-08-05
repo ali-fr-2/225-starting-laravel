@@ -10,6 +10,7 @@ class MyHome extends Controller
 {
     public function index()
     {
+        //global-scopes
 
         // $articles=Articles::all();
         // dd($articles);
@@ -17,8 +18,15 @@ class MyHome extends Controller
         // $articles=Articles::all()->where('id','>',6);
         // dd($articles);
 
-        $articles=Articles::all();
-        $articles=Articles::withoutGlobalScope('price')->where('id','>',6)->get();
+        // $articles=Articles::all();
+        // $articles=Articles::withoutGlobalScope('price')->where('id','>',6)->get();
+        // dd($articles);
+
+        //local-scopes
+
+
+        $articles=Articles::price()->get();
+        // $articles=Articles::price()->toSql();
         dd($articles);
 
     }

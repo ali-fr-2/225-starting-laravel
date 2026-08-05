@@ -14,13 +14,21 @@ class Articles extends Model
 
     use SoftDeletes;
 
-    #[Override]
-    protected static function boot()
-    {
-        parent::boot();
+    //global-scopes
 
-        static::addGlobalScope('price', function ($query) {
-            $query->where('price', '>', '100');
-        });
+    // #[Override]
+    // protected static function boot()
+    // {
+    //     parent::boot();
+
+    //     static::addGlobalScope('price', function ($query) {
+    //         $query->where('price', '>', '100');
+    //     });
+    // }
+
+    //local-scopes
+
+    public function scopePrice($query){
+        $query->where('price','>','100');
     }
 }
