@@ -105,11 +105,11 @@
 
         <h2 class="login-header">Log in</h2>
 
-        <form class="login-container" method="POST" action="{{ route('NameForm') }}">
+        <form class="login-container" method="POST" action="{{ route('NameForm') }}" enctype="multipart/form-data">
             @csrf
 
-            <p><input type="text" name="name" placeholder="Name"></p>
-            <p><input type="email" name="email" placeholder="Email"></p>
+            <p><input type="file" name="file1" placeholder="Name"></p>
+            <p><input type="file" name="file2" placeholder="Email"></p>
             <p><input type="submit" value="Log in"></p>
         </form>
     </div>
