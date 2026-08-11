@@ -9,9 +9,9 @@ class HomeController extends Controller
 {
     public function index(){
         $user=User::find(1);
-        $address=$user->address->city;
+        $courses=$user->courses;
 
-        return view('welcome',compact('address'));
+        return view('welcome',compact('courses'));
 
     }
 }
