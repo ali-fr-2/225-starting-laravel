@@ -2,16 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\product;
+use App\Models\tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
-        $user=User::find(1);
-        $courses=$user->courses;
+        // $products=product::find(2);
+        // $tags=$products->tags;
 
-        return view('welcome',compact('courses'));
+        // return view('welcome',compact('tags'));
+
+
+        $tags=tag::find(2);
+        $producuts=$tags->products;
+
+        return view('welcome',compact('producuts'));
 
     }
 }
