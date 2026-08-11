@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function login(){
-        return view('login');
-    }
+    public function index(){
+        $user=User::find(1);
+        $address=$user->address->city;
 
-    public function form(Request $request){
-
-        dd($request->file1->getClientOriginalName());
+        return view('welcome',compact('address'));
 
     }
 }
